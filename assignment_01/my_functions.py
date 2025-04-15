@@ -171,7 +171,7 @@ def ssr(y, x, beta_0, beta_1):
     ssr = 0 # Modify this line.
     for i in range(0, n):
         y_hat = beta_0 + beta_1 * x[i]  
-    ssr = ssr + (y[i] - y_hat) ** 2 # Modify this line.
+        ssr = ssr + (y[i] - y_hat) ** 2 # Modify this line.
     
     return ssr
 
