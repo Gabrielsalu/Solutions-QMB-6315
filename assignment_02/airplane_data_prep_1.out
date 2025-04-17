@@ -1,0 +1,116 @@
+C:\Users\MORIL027\Documents\GitHub\QMB6315S25_Grading\Solutions-QMB-6315\assignment_02
+          sale_id         age          price
+count  195.000000  195.000000     195.000000
+mean   198.000000   24.610256   50236.733333
+std     56.435804    6.952853   41470.291455
+min    101.000000   13.000000    9000.000000
+25%    149.500000   19.000000   19250.000000
+50%    198.000000   22.000000   33500.000000
+75%    246.500000   30.000000   73500.000000
+max    295.000000   44.000000  254000.000000
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                  price   R-squared (uncentered):                   0.400
+Model:                            OLS   Adj. R-squared (uncentered):              0.397
+Method:                 Least Squares   F-statistic:                              129.4
+Date:                Thu, 17 Apr 2025   Prob (F-statistic):                    2.67e-23
+Time:                        01:00:11   Log-Likelihood:                         -2388.1
+No. Observations:                 195   AIC:                                      4778.
+Df Residuals:                     194   BIC:                                      4781.
+Df Model:                           1                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+age         1609.8782    141.526     11.375      0.000    1330.751    1889.005
+==============================================================================
+Omnibus:                       40.909   Durbin-Watson:                   0.392
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               62.236
+Skew:                           1.168   Prob(JB):                     3.06e-14
+Kurtosis:                       4.486   Cond. No.                         1.00
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+   sale_id  age  price  passengers  wtop  fixgear  tdrag
+0      101   22   9000           2     0        0      0
+1      102   21  10000           2     0        0      0
+2      103   20  11500           2     0        0      0
+3      104   19  13000           2     0        0      0
+4      105   22  17000           2     1        0      0
+          sale_id         age  ...     fixgear       tdrag
+count  195.000000  195.000000  ...  195.000000  195.000000
+mean   198.000000   24.610256  ...    0.451282    0.056410
+std     56.435804    6.952853  ...    0.498902    0.231306
+min    101.000000   13.000000  ...    0.000000    0.000000
+25%    149.500000   19.000000  ...    0.000000    0.000000
+50%    198.000000   22.000000  ...    0.000000    0.000000
+75%    246.500000   30.000000  ...    1.000000    0.000000
+max    295.000000   44.000000  ...    1.000000    1.000000
+
+[8 rows x 7 columns]
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                  price   R-squared (uncentered):                   0.877
+Model:                            OLS   Adj. R-squared (uncentered):              0.874
+Method:                 Least Squares   F-statistic:                              270.9
+Date:                Thu, 17 Apr 2025   Prob (F-statistic):                    2.08e-84
+Time:                        01:00:11   Log-Likelihood:                         -2233.6
+No. Observations:                 195   AIC:                                      4477.
+Df Residuals:                     190   BIC:                                      4494.
+Df Model:                           5                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+age        -1688.7301    179.606     -9.402      0.000   -2043.007   -1334.453
+passengers  2.016e+04   1424.322     14.157      0.000    1.74e+04     2.3e+04
+wtop         226.9010   3598.884      0.063      0.950   -6871.999    7325.801
+fixgear      1.39e+04   5029.875      2.764      0.006    3981.918    2.38e+04
+tdrag      -3.946e+04   8325.200     -4.739      0.000   -5.59e+04    -2.3e+04
+==============================================================================
+Omnibus:                      121.138   Durbin-Watson:                   0.908
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              951.220
+Skew:                           2.287   Prob(JB):                    2.79e-207
+Kurtosis:                      12.806   Cond. No.                         136.
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:                  price   R-squared (uncentered):                   0.917
+Model:                            OLS   Adj. R-squared (uncentered):              0.913
+Method:                 Least Squares   F-statistic:                              227.9
+Date:                Thu, 17 Apr 2025   Prob (F-statistic):                    1.88e-95
+Time:                        01:00:11   Log-Likelihood:                         -2195.4
+No. Observations:                 195   AIC:                                      4409.
+Df Residuals:                     186   BIC:                                      4438.
+Df Model:                           9                                                  
+Covariance Type:            nonrobust                                                  
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+age        -2769.0864    188.903    -14.659      0.000   -3141.754   -2396.419
+passengers  5056.5317   2254.563      2.243      0.026     608.730    9504.333
+wtop       -8982.6532   3162.684     -2.840      0.005   -1.52e+04   -2743.310
+fixgear    -1.878e+04   5467.682     -3.435      0.001   -2.96e+04   -7993.160
+tdrag       -4.15e+04   7596.600     -5.463      0.000   -5.65e+04   -2.65e+04
+horse        248.3436     68.006      3.652      0.000     114.182     382.506
+fuel         -77.8363    127.840     -0.609      0.543    -330.039     174.366
+ceiling        1.3411      0.533      2.518      0.013       0.290       2.392
+cruise       304.6123     76.350      3.990      0.000     153.988     455.236
+==============================================================================
+Omnibus:                      131.901   Durbin-Watson:                   1.025
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1506.232
+Skew:                           2.389   Prob(JB):                         0.00
+Kurtosis:                      15.750   Cond. No.                     8.55e+04
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[3] The condition number is large, 8.55e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
