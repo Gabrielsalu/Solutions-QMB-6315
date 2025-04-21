@@ -191,9 +191,7 @@ print(reg_model_sales_specs.summary())
 # Question 3: Obtain Performance Data
 ##################################################
 
-cur.execute("PRAGMA table_info(Perf);")
-for row in cur.fetchall():
-    print(row)
+
 
 #--------------------------------------------------
 # a. Submit a query to the database that obtains
