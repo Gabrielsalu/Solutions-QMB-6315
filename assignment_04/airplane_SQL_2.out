@@ -1,0 +1,123 @@
+C:\Users\MORIL027\Documents\GitHub\QMB6315S25_Grading\Solutions-QMB-6315\assignment_04
+
+           SELECT sale_id, age, price
+            FROM Sales
+            
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.411
+Model:                            OLS   Adj. R-squared:                  0.408
+Method:                 Least Squares   F-statistic:                     134.6
+Date:                Sun, 27 Apr 2025   Prob (F-statistic):           5.97e-24
+Time:                        10:30:14   Log-Likelihood:                -2298.0
+No. Observations:                 195   AIC:                             4600.
+Df Residuals:                     193   BIC:                             4607.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   1.443e+05   8425.999     17.128      0.000    1.28e+05    1.61e+05
+age        -3823.0470    329.543    -11.601      0.000   -4473.016   -3173.078
+==============================================================================
+Omnibus:                       58.681   Durbin-Watson:                   0.579
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              171.108
+Skew:                           1.244   Prob(JB):                     6.99e-38
+Kurtosis:                       6.856   Cond. No.                         94.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+            SELECT 
+             Sales.sale_id,
+             Sales.age,
+             Sales.price,
+              Specs.passengers,
+              Specs.wtop,
+              Specs.fixgear,
+               Specs.tdrag
+            FROM Sales
+            JOIN Specs ON Sales.sale_id = Specs.sale_id;
+            
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.725
+Model:                            OLS   Adj. R-squared:                  0.718
+Method:                 Least Squares   F-statistic:                     99.60
+Date:                Sun, 27 Apr 2025   Prob (F-statistic):           4.74e-51
+Time:                        10:30:14   Log-Likelihood:                -2223.7
+No. Observations:                 195   AIC:                             4459.
+Df Residuals:                     189   BIC:                             4479.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   4.207e+04   9364.565      4.493      0.000    2.36e+04    6.05e+04
+age        -2544.6636    256.120     -9.935      0.000   -3049.884   -2039.443
+passengers  1.564e+04   1690.768      9.248      0.000    1.23e+04     1.9e+04
+wtop       -1809.2962   3459.709     -0.523      0.602   -8633.900    5015.308
+fixgear     1.355e+04   4794.327      2.827      0.005    4095.111     2.3e+04
+tdrag      -2.703e+04   8402.454     -3.217      0.002   -4.36e+04   -1.05e+04
+==============================================================================
+Omnibus:                      130.364   Durbin-Watson:                   0.953
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1218.017
+Skew:                           2.443   Prob(JB):                    3.24e-265
+Kurtosis:                      14.226   Cond. No.                         172.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+           SELECT 
+              Sales.sale_id,
+              Sales.age,
+              Sales.price,
+              Specs.passengers,
+              Specs.wtop,
+              Specs.fixgear,
+              Specs.tdrag,
+               Perf.horse,
+               Perf.fuel,
+               Perf.ceiling,
+               Perf.cruise
+            FROM Sales
+            JOIN Specs ON Sales.sale_id = Specs.sale_id
+            JOIN Perf ON Sales.sale_id = Perf.sale_id;
+            
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.803
+Model:                            OLS   Adj. R-squared:                  0.794
+Method:                 Least Squares   F-statistic:                     83.90
+Date:                Sun, 27 Apr 2025   Prob (F-statistic):           1.64e-60
+Time:                        10:30:14   Log-Likelihood:                -2191.1
+No. Observations:                 195   AIC:                             4402.
+Df Residuals:                     185   BIC:                             4435.
+Df Model:                           9                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept  -4.189e+04   1.44e+04     -2.910      0.004   -7.03e+04   -1.35e+04
+age        -2354.0550    233.775    -10.070      0.000   -2815.262   -1892.848
+passengers  5585.7520   2218.095      2.518      0.013    1209.739    9961.765
+wtop       -9927.9502   3118.020     -3.184      0.002   -1.61e+04   -3776.503
+fixgear    -3.096e+04   6802.216     -4.552      0.000   -4.44e+04   -1.75e+04
+tdrag      -4.925e+04   7909.496     -6.226      0.000   -6.49e+04   -3.36e+04
+horse        224.0914     67.199      3.335      0.001      91.516     356.667
+fuel         -30.3803    126.405     -0.240      0.810    -279.761     219.001
+ceiling        1.5251      0.526      2.899      0.004       0.487       2.563
+cruise       545.9664    111.733      4.886      0.000     325.532     766.401
+==============================================================================
+Omnibus:                      121.714   Durbin-Watson:                   1.010
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1364.529
+Skew:                           2.139   Prob(JB):                    4.97e-297
+Kurtosis:                      15.233   Cond. No.                     1.68e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.68e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
